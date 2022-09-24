@@ -1,8 +1,8 @@
-div {
-    background-color:rgba(0, 139, 139, 0.712);
+div{
+    background-color:rgb(231, 212, 181)
 }
 
 app-logo-redes-sociales {
     float:right;
-    margin-top: 50px;
+    margin-top: 25px
 }
