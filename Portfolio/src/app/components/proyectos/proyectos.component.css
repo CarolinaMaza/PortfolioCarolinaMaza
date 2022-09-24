@@ -1,0 +1,19 @@
+.row {
+    padding: 20px;
+    background-color: rgb(231, 212, 181);
+}
+
+.contenedor {
+    width: auto;
+}
+
+.parte1, .parte2 {
+    display: inline-block;
+    text-align: justify;
+}
+
+.img-proyecto {
+ box-shadow: 10px 10px 20px black;
+ height: 200px;
+}
+
