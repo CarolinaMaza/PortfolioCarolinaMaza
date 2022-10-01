@@ -1,0 +1,36 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.redes{
+    margin-right: 0.5em;
+}
+
+img {
+    width:250px;
+    margin-top: 5px;
+}
+
+img {
+    width:70px;
+}
+
+/*Para la vista del celular*/
+@media (max-width: 575px){
+    .container {
+        flex-direction:column;
+    }
+    
+    .redes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .redes img {
+        margin: 0.5em; /*Para que se adapte en función de la letra de la pantalla*/
+    }    
+}
+
