@@ -4,12 +4,12 @@
     align-items: center;
 }
 
-.redes{
-    margin-right: 0.5em;
-}
+.logoRedes{
+    margin-right: 100px;
+}   
 
-img {
-    width:250px;
+.logoAP {
+    width:180px;
     margin-top: 5px;
 }
 
@@ -17,7 +17,12 @@ img {
     width:70px;
 }
 
-/*Para la vista del celular*/
+.btn {
+    height: 50px;
+    width: 70px;
+}
+
+    /*Para la vista del celular*/
 @media (max-width: 575px){
     .container {
         flex-direction:column;

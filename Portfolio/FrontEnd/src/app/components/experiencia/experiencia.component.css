@@ -3,8 +3,12 @@
     background-color: rgb(231, 212, 181)
 }
 
+h1{
+    background-color:rgba(242, 215, 217, 0.699);
+}
+
 h2,h3 {
-    display:inline
+    display:inline;
 }
 
 img {
