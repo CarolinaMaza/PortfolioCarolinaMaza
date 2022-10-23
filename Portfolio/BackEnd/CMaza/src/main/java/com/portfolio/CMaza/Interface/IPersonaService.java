@@ -4,16 +4,15 @@ import com.portfolio.CMaza.Entity.Persona;
 import java.util.List;
 
 public interface IPersonaService {
-    //Método para traer una lista de personas
-    public List <Persona> traerPersonas ();
+    //Traer una lista de personas
+    public List<Persona> getPersona();
     
-    //Método para guardar una persona en la lista
-    public void guardarPersona(Persona persona);
-            
-    //Método para eliminar una persona en la lista
-    public void borrarPersona (Long id);
+    //Guardar un objeto de tipo Persona
+    public void savePersona(Persona persona);
     
-    //Método para buscar una persona en la lista
-    public Persona traerPersona (Long id);
+    //Eliminar un objeto pero lo buscamos por ID
+    public void deletePersona(Long id);
     
+    //Buscar una persona por ID
+    public Persona findPersona(Long id);
 }

@@ -2,7 +2,7 @@ package com.portfolio.CMaza.Security.Service;
 
 import com.portfolio.CMaza.Security.Entity.Rol;
 import com.portfolio.CMaza.Security.Enum.RolNombre;
-import com.portfolio.CMaza.Security.Repository.IRolRepository;
+import com.portfolio.CMaza.Security.Repository.iRolRepository;
 import java.util.Optional;
 import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,16 +12,13 @@ import org.springframework.stereotype.Service;
 @Transactional
 public class RolService {
     @Autowired
-    IRolRepository irolRepository;
+    iRolRepository irolRepository;
     
-    public Optional<Rol> getByRolNombre (RolNombre rolNombre){
-        return irolRepository.findByRolNombre (rolNombre);
+    public Optional<Rol> getByRolNombre(RolNombre rolNombre){
+        return irolRepository.findByRolNombre(rolNombre);
     }
     
     public void save(Rol rol){
         irolRepository.save(rol);
     }
-    
-    
-    
 }
