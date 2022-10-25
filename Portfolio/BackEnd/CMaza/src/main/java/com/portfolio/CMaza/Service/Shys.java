@@ -1,4 +1,3 @@
-
 package com.portfolio.CMaza.Service;
 
 import com.portfolio.CMaza.Entity.hys;
@@ -12,34 +11,35 @@ import org.springframework.stereotype.Service;
 @Transactional
 @Service
 public class Shys {
+
     @Autowired
     Rhys rhys;
-    
-    public List<hys> list(){
+    //Mét. para traer listado de skills, obtener uno por ID/por nombre, guardar, borrar, validar si existe por ID/por nombre
+    public List<hys> list() {
         return rhys.findAll();
     }
-    
-    public Optional<hys> getOne(int id){
+
+    public Optional<hys> getOne(int id) {
         return rhys.findById(id);
     }
-    
-    public Optional<hys> getByNombre(String nombre){
+
+    public Optional<hys> getByNombre(String nombre) {
         return rhys.findByNombre(nombre);
     }
-    
-    public void save(hys skill){
+
+    public void save(hys skill) {
         rhys.save(skill);
     }
-    
-    public void delete(int id){
+
+    public void delete(int id) {
         rhys.deleteById(id);
     }
-    
-    public boolean existsById(int id){
+
+    public boolean existsById(int id) {
         return rhys.existsById(id);
     }
-    
-    public boolean existsByNombre(String nombre){
+
+    public boolean existsByNombre(String nombre) {
         return rhys.existsByNombre(nombre);
     }
 }

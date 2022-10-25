@@ -43,6 +43,7 @@ public class CEducacion {
         return new ResponseEntity(educacion, HttpStatus.OK);
     }
 
+    //Mét. para eliminar educación según ID
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> delete(@PathVariable("id") int id) {
         if (!sEducacion.existsById(id)) {
@@ -52,6 +53,7 @@ public class CEducacion {
         return new ResponseEntity(new Mensaje("Educacion eliminada correctamente"), HttpStatus.OK);
     }
 
+    //Mét. para crear educaciones previas validaciones
     @PostMapping("/create")
     public ResponseEntity<?> create(@RequestBody dtoEducacion dtoeducacion) {
         if (StringUtils.isBlank(dtoeducacion.getNombreE())) {
@@ -60,10 +62,9 @@ public class CEducacion {
         if (sEducacion.existsByNombreE(dtoeducacion.getNombreE())) {
             return new ResponseEntity(new Mensaje("El nombre de la educación ya existe"), HttpStatus.BAD_REQUEST);
         }
-         if (StringUtils.isBlank(dtoeducacion.getDescripcionE())) {
+        if (StringUtils.isBlank(dtoeducacion.getDescripcionE())) {
             return new ResponseEntity(new Mensaje("La descripción de la educación es obligatorio"), HttpStatus.BAD_REQUEST);
         }
-
 
         Educacion educacion = new Educacion(
                 dtoeducacion.getNombreE(), dtoeducacion.getDescripcionE()
@@ -73,6 +74,7 @@ public class CEducacion {
 
     }
 
+    //Mét. que actualiza la educación según ID previas validaciones
     @PutMapping("/update/{id}")
     public ResponseEntity<?> update(@PathVariable("id") int id, @RequestBody dtoEducacion dtoeducacion) {
         if (!sEducacion.existsById(id)) {

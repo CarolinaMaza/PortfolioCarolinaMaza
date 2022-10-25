@@ -1,15 +1,15 @@
-
 package com.portfolio.CMaza.Dto;
 
 import javax.validation.constraints.NotBlank;
 
-
 public class dtoHys {
+
     @NotBlank
     private String nombre;
     @NotBlank
     private int porcentaje;
 
+    //Mét. constructores
     public dtoHys() {
     }
 
@@ -18,6 +18,7 @@ public class dtoHys {
         this.porcentaje = porcentaje;
     }
 
+    //Mét. getters y setters
     public String getNombre() {
         return nombre;
     }
@@ -33,6 +34,5 @@ public class dtoHys {
     public void setPorcentaje(int porcentaje) {
         this.porcentaje = porcentaje;
     }
-    
-    
+
 }

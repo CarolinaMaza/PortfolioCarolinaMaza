@@ -42,7 +42,7 @@ public class CExperiencia {
         return new ResponseEntity(experiencia, HttpStatus.OK);
     }
 
-    //Mét. para eliminar experciancias según ID
+    //Mét. para eliminar experiencias según ID
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> delete(@PathVariable("id") int id) {
         if (!sExperiencia.existsById(id)) {
