@@ -1,18 +1,18 @@
-
-package com.portfolio.CMaza.Security.Controller.Dto;
+package com.portfolio.CMaza.Security.Dto;
 
 import java.util.HashSet;
 import java.util.Set;
 
+//Clase que contiene el modelo de nuevos usuarios
 public class NuevoUsuario {
+
     private String nombre;
     private String nombreUsuario;
     private String email;
     private String password;
     private Set<String> roles = new HashSet<>();
-    
-    //Gettes & Setters
 
+    //Mét. getters y setters
     public String getNombre() {
         return nombre;
     }
@@ -52,5 +52,5 @@ public class NuevoUsuario {
     public void setRoles(Set<String> roles) {
         this.roles = roles;
     }
-    
+
 }

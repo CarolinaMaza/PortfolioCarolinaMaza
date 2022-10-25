@@ -1,4 +1,3 @@
-
 package com.portfolio.CMaza.Entity;
 
 import javax.persistence.Entity;
@@ -8,12 +7,14 @@ import javax.persistence.Id;
 
 @Entity
 public class Educacion {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String nombreE;
     private String descripcionE;
 
+    //Mét. constructores
     public Educacion() {
     }
 
@@ -22,6 +23,7 @@ public class Educacion {
         this.descripcionE = descripcionE;
     }
 
+    //Mét. getters y setters
     public int getId() {
         return id;
     }
@@ -45,6 +47,5 @@ public class Educacion {
     public void setDescripcionE(String descripcionE) {
         this.descripcionE = descripcionE;
     }
-    
-    
+
 }

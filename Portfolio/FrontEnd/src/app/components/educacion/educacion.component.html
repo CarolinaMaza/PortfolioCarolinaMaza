@@ -1,6 +1,46 @@
 <div class="row">
-    <h1>Educación</h1>
-    <div>
+  <h1>Educación</h1>
+
+  <div class="col-lg-2">
+    <button
+      type="button"
+      class="btn btn-dark"
+      routerLink="/nuevaedu"
+      *ngIf="isLogged"
+    >
+      Add Educación
+    </button>
+  </div>
+
+  <div class="col lg 1"></div>
+  <div class="col-lg-11">
+    <table class="table">
+      <tbody>
+        <tr *ngFor="let Educacion of educacion">
+          <td>
+            {{ Educacion.nombreE }}
+          </td>
+          <td>{{ Educacion.descripcionE }}</td>
+          <td *ngIf="isLogged">
+            <button
+              class="btn btn-light"
+              routerLink="/editedu/{{ Educacion.id }}"
+            >
+              Edit
+              <i class="bi bi-pencil-square"></i>
+            </button>
+          </td>
+          <td *ngIf="isLogged">
+            <button class="btn btn-danger" (click)="delete(Educacion.id)">
+              Delete
+              <i class="bi bi-file-earmark-x"></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- <div>
         <ul>
             <li class="row">
                 <img src="../../../assets/logoAPE.jpg" alt="Foto de estudio 1" class="col-2">
@@ -26,5 +66,5 @@
                 <p>Curso Sé Programar</p>
                 </div>
         </ul>
-    </div>
+    </div> -->
 </div>

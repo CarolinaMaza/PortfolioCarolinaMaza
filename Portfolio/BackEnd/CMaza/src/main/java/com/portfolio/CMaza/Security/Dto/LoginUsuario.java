@@ -1,20 +1,16 @@
-
-package com.portfolio.CMaza.Security.Controller.Dto;
+package com.portfolio.CMaza.Security.Dto;
 
 import javax.validation.constraints.NotBlank;
 
-/**
- *
- * @author Usuario
- */
+//Clase que contiene el modelo de login de los usuario
 public class LoginUsuario {
+
     @NotBlank
     private String nombreUsuario;
     @NotBlank
     private String password;
-    
-    //Getter & Setter
 
+    //Mét. getters y setters
     public String getNombreUsuario() {
         return nombreUsuario;
     }
@@ -30,5 +26,5 @@ public class LoginUsuario {
     public void setPassword(String password) {
         this.password = password;
     }
-    
+
 }

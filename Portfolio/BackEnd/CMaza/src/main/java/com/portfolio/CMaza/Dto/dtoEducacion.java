@@ -3,11 +3,13 @@ package com.portfolio.CMaza.Dto;
 import javax.validation.constraints.NotBlank;
 
 public class dtoEducacion {
+
     @NotBlank
     private String nombreE;
     @NotBlank
     private String descripcionE;
 
+    //Mét. constructores
     public dtoEducacion() {
     }
 
@@ -15,7 +17,8 @@ public class dtoEducacion {
         this.nombreE = nombreE;
         this.descripcionE = descripcionE;
     }
-
+    
+    //Mét. getters y setters
     public String getNombreE() {
         return nombreE;
     }
@@ -31,6 +34,5 @@ public class dtoEducacion {
     public void setDescripcionE(String descripcionE) {
         this.descripcionE = descripcionE;
     }
-    
-    
+
 }
