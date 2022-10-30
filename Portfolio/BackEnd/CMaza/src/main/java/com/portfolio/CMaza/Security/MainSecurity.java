@@ -1,8 +1,8 @@
 package com.portfolio.CMaza.Security;
 
-import com.portfolio.CMaza.Security.Service.UserDetailsImpl;
-import com.portfolio.CMaza.Security.jwt.JwtEntryPoint;
-import com.portfolio.CMaza.Security.jwt.JwtTokenFilter;
+import com.portfolio.CMaza.Security.Service.UserDetailsImplent;
+import com.portfolio.CMaza.Security.Jwt.JwtEntryPoint;
+import com.portfolio.CMaza.Security.Jwt.JwtTokenFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -23,7 +23,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 public class MainSecurity extends WebSecurityConfigurerAdapter {
 
     @Autowired
-    UserDetailsImpl userDetailsServicesImpl;
+    UserDetailsImplent userDetailsServicesImpl;
 
     @Autowired
     JwtEntryPoint jwtEntryPoint;

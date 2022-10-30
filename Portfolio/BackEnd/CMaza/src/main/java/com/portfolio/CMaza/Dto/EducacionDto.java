@@ -1,39 +1,30 @@
-package com.portfolio.CMaza.Entity;
+package com.portfolio.CMaza.Dto;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.NotBlank;
 
-@Entity
-public class Educacion {
+public class EducacionDto {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-
-    @NotNull
-    @Size(min = 5, message = "El nombre de la institución no cumple con la longitud requerida")
+  //  public Educacion(String institucionEd, String tituloEd, String imgInstitucionEd, int fechaInicioEd, int fechaFinEd)
+    @NotBlank
     private String institucionEd;
 
-    @NotNull
-    @Size(min = 5, message = "El nombre del título no cumple con la longitud requerida")
+    @NotBlank
     private String tituloEd;
 
+    @NotBlank
     private String imgInstitucionEd;
 
-    @NotNull
+    @NotBlank
     private int fechaInicioEd;
 
+    @NotBlank
     private int fechaFinEd;
 
     //Mét. constructores
-    public Educacion() {
+    public EducacionDto() {
     }
 
-    public Educacion(String institucionEd, String tituloEd, String imgInstitucionEd, int fechaInicioEd, int fechaFinEd) {
+    public EducacionDto(String institucionEd, String tituloEd, String imgInstitucionEd, int fechaInicioEd, int fechaFinEd) {
         this.institucionEd = institucionEd;
         this.tituloEd = tituloEd;
         this.imgInstitucionEd = imgInstitucionEd;
@@ -42,14 +33,6 @@ public class Educacion {
     }
 
     //Mét. getters y setters
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public String getInstitucionEd() {
         return institucionEd;
     }

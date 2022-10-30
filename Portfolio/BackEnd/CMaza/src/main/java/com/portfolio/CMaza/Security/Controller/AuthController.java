@@ -8,7 +8,7 @@ import com.portfolio.CMaza.Security.Entity.Usuario;
 import com.portfolio.CMaza.Security.Enums.RolNombre;
 import com.portfolio.CMaza.Security.Service.RolService;
 import com.portfolio.CMaza.Security.Service.UsuarioService;
-import com.portfolio.CMaza.Security.jwt.JwtProvider;
+import com.portfolio.CMaza.Security.Jwt.JwtProvider;
 import java.util.HashSet;
 import java.util.Set;
 import javax.validation.Valid;

@@ -1,4 +1,4 @@
-package com.portfolio.CMaza.Security.jwt;
+package com.portfolio.CMaza.Security.Jwt;
 
 import java.io.IOException;
 import javax.servlet.ServletException;

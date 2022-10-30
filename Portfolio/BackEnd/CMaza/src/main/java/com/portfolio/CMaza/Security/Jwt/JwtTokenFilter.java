@@ -1,6 +1,6 @@
-package com.portfolio.CMaza.Security.jwt;
+package com.portfolio.CMaza.Security.Jwt;
 
-import com.portfolio.CMaza.Security.Service.UserDetailsImpl;
+import com.portfolio.CMaza.Security.Service.UserDetailsImplent;
 import java.io.IOException;
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
@@ -22,7 +22,7 @@ public class JwtTokenFilter extends OncePerRequestFilter {
     @Autowired
     JwtProvider jwtProvider;
     @Autowired
-    UserDetailsImpl userDetailsServiceImpl;
+    UserDetailsImplent userDetailsServiceImpl;
 
     //Implementación de mét. abstracto y sobreescritura
     @Override

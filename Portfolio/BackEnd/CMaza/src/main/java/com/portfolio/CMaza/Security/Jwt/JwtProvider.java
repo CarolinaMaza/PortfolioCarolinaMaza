@@ -1,4 +1,4 @@
-package com.portfolio.CMaza.Security.jwt;
+package com.portfolio.CMaza.Security.Jwt;
 
 import com.portfolio.CMaza.Security.Entity.UsuarioPrincipal;
 import io.jsonwebtoken.ExpiredJwtException;
