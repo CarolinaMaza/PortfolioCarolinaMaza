@@ -1,19 +1,28 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { persona } from '../model/persona.model';
+import { environment } from 'src/environments/environment';
+import { persona } from '../model/persona';
 
 @Injectable({
   providedIn: 'root',
 })
 export class PersonaService {
-  URL = 'http://localhost:8080/personas';
+  URL = environment.URL + 'persona/';
 
   // Mét. constructor
-  constructor(private http: HttpClient) {}
+  constructor(private httpClient: HttpClient) {}
 
-  // Mét. getters y setters
-  public getPersona(): Observable<persona> {
-    return this.http.get<persona>(this.URL + 'traer/perfil');
+  //Mét. propios de la clase para traer lista, traer, guardar, actualizar y borrar educación.
+  public lista(): Observable<persona[]> {
+    return this.httpClient.get<persona[]>(this.URL + 'list');
+  }
+
+  public detail(id: number): Observable<persona> {
+    return this.httpClient.get<persona>(this.URL + `detail/${id}`);
+  }
+
+  public update(id: number, Persona: persona): Observable<any> {
+    return this.httpClient.put<any>(this.URL + `update/${id}`, Persona);
   }
 }

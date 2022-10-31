@@ -1,31 +1,62 @@
-<div class="container">
-  <div class="row">
-    <div>
-      <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
-        <div class="form-group">
-          <label for="nombreE">Nombre de la empresa</label>
-          <input
-            type="text"
-            class="form-control"
-            id="nombreE"
-            name="nombreE"
-            [(ngModel)]="nombreE"
-            required
-          />
-        </div>
-        <div class="form-group">
-          <label for="descripcionE">Descripción de puesto de trabajo</label>
-          <input
-            type="text"
-            class="form-control"
-            id="descripcionE"
-            name="descripcionE"
-            [(ngModel)]="descripcionE"
-            required
-          />
-        </div>
-        <button class="btn btn-dark">Add</button>
-      </form>
-    </div>
+<body>
+  <div class="container">
+    <form (ngSubmit)="onCreate()" novalidate #f="ngForm" class="row">
+      <div class="form-group col-xs-12 col-md-6">
+        <label for="empresaEx">Nombre de la empresa</label>
+        <input
+          type="text"
+          class="form-control"
+          id="empresaEx"
+          name="empresaEx"
+          [(ngModel)]="empresaEx"
+          required
+        />
+      </div>
+      <div class="form-group col-xs-12 col-md-6">
+        <label for="tituloEx">Puesto de trabajo</label>
+        <input
+          type="text"
+          class="form-control"
+          id="tituloEx"
+          name="tituloEx"
+          [(ngModel)]="tituloEx"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="descripcionEx">Descripcion del trabajo realizado</label>
+        <input
+          type="text"
+          class="form-control"
+          id="descripcionEx"
+          name="descripcionEx"
+          [(ngModel)]="descripcionEx"
+          required
+        />
+      </div>
+      <div class="form-group col-xs-12 col-md-6">
+        <label for="fechaInicioEx">Fecha de inicio</label>
+        <input
+          type="number"
+          class="form-control"
+          id="fechaInicioEx"
+          name="fechaInicioEx"
+          [(ngModel)]="fechaInicioEx"
+          required
+        />
+      </div>
+      <div class="form-group col-xs-12 col-md-6">
+        <label for="fechaFinEx">Fecha de finalización</label>
+        <input
+          type="number"
+          class="form-control"
+          id="fechaFinEx"
+          name="fechaFinEx"
+          [(ngModel)]="fechaFinEx"
+          required
+        />
+      </div>
+      <span> <button class="btn btn-dark">Incorporate</button></span>
+    </form>
   </div>
-</div>
+</body>

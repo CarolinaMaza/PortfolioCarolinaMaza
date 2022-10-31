@@ -1,5 +1,5 @@
 <div class="row">
-  <h1>Experiencia</h1>
+  <h1>Experiencia laboral</h1>
   <div class="col-lg-2">
     <button
       type="button"
@@ -7,53 +7,34 @@
       routerLink="/nuevaexp"
       *ngIf="isLogged"
     >
-      Add Experiencia
+      Add new
     </button>
   </div>
 
-  <div class="col lg 1"></div>
-  <div class="col-lg-11">
-    <table class="table">
-      <tbody>
-        <tr *ngFor="let Experiencia of expe">
-          <td>{{ Experiencia.nombreE }}</td>
-          <td>{{ Experiencia.descripcionE }}</td>
-          <td *ngIf="isLogged">
-            <!-- PARA CAMBIAR LOS ÍCONOS DE LOS BOTONES https://icons.getbootstrap.com/icons -->
-            <button
-              class="btn btn-light"
-              routerLink="/editexp/{{ Experiencia.id }}"
-            >
-              Edit
-              <i class="bi bi-pencil-square"></i>
-            </button>
-          </td>
-          <td *ngIf="isLogged">
-            <button class="btn btn-danger" (click)="delete(Experiencia.id)">
-              Delete
-              <i class="bi bi-file-earmark-x"></i>
-            </button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+  <div class="row" *ngFor="let Experiencia of expe">
+    <div class="col-xm-12 col-md-2" *ngIf="Experiencia">
+      <img
+        id="imagen"
+        src="{{ Experiencia.imgEmpresaEx }}"
+        alt="Logo de empresa"
+        max-width="100px"
+      />
+    </div>
+    <div class="col-xm-11 col-md-9">
+      <p class="titulo">
+        {{ Experiencia.tituloEx }} ({{ Experiencia.fechaInicioEx }} -
+        {{ Experiencia.fechaFinEx }})
+      </p>
+      <p class="contenido">{{ Experiencia.empresaEx }}</p>
+      <p class="contenido">{{ Experiencia.descripcionEx }}</p>
+    </div>
+    <div class="col-1 col-md-1" *ngIf="isLogged">
+      <button class="btn btn-light" routerLink="/editexp/{{ Experiencia.id }}">
+        <i class="bi bi-pencil-fill"></i>
+      </button>
+      <button class="btn btn-danger" (click)="delete(Experiencia.id)">
+        <i class="bi bi-trash-fill"></i>
+      </button>
+    </div>
   </div>
-  <!-- <div>
-        <ul>
-            <li class="row">
-                <img src="../../../assets/logoFCE.jpg" alt="Foto de experiencia 1" class="col-2">
-                <div class="col-10">
-                <h2>Tutora en Módulo de Matemática </h2> - <h3>(2019 - Actualidad)</h3>
-                <p>Facultad de Ciencias Económicas - Universidad Nacional de Cuyo</p>
-            </div>
-            </li>
-            <li class="row">
-                <img src="../../../assets/logoClinica.jpg" alt="Foto de experiencia 2" class="col-2">
-                <div class="col-10">
-                <h2>Pasante en Área de Contaduría </h2> - <h3>(Actualidad)</h3>
-                <p>Clínica Santa Rosa</p>
-                </div>
-            </li>
-        </ul>
-    </div> -->
 </div>

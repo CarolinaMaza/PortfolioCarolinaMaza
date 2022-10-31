@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/proyecto")
-@CrossOrigin(origins = {"https://frontpruebamsasiuk.web.app", "http://localhost:4200"})
+@CrossOrigin(origins = {"https://frontcaromaza.web.app", "http://localhost:4200"})
 public class ProyectoController {
     //Clase que permite crear, buscar, editar, borrar los datos de proyecto del portfolio
     

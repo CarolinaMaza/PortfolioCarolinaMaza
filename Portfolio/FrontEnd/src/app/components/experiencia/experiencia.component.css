@@ -3,12 +3,8 @@
     background-color: rgb(231, 212, 181)
 }
 
-h1{
-    background-color:rgba(242, 215, 217, 0.699);
-}
-
-h2,h3 {
-    display:inline;
+h1 {
+    background-color: rgba(242, 215, 217, 0.699);
 }
 
 img {
@@ -16,7 +12,15 @@ img {
     border-radius: 100%
 }
 
-p {
+.titulo,
+.contenido {
     font-size: 0.5cm;
-    margin-top: 8px
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.titulo {
+    font-size: 30px;
+    font-weight: bold;
+
 }

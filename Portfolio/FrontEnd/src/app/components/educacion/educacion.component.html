@@ -1,6 +1,5 @@
 <div class="row">
   <h1>Educación</h1>
-
   <div class="col-lg-2">
     <button
       type="button"
@@ -8,63 +7,33 @@
       routerLink="/nuevaedu"
       *ngIf="isLogged"
     >
-      Add Educación
+      Add new
     </button>
   </div>
 
-  <div class="col lg 1"></div>
-  <div class="col-lg-11">
-    <table class="table">
-      <tbody>
-        <tr *ngFor="let Educacion of educacion">
-          <td>
-            {{ Educacion.nombreE }}
-          </td>
-          <td>{{ Educacion.descripcionE }}</td>
-          <td *ngIf="isLogged">
-            <button
-              class="btn btn-light"
-              routerLink="/editedu/{{ Educacion.id }}"
-            >
-              Edit
-              <i class="bi bi-pencil-square"></i>
-            </button>
-          </td>
-          <td *ngIf="isLogged">
-            <button class="btn btn-danger" (click)="delete(Educacion.id)">
-              Delete
-              <i class="bi bi-file-earmark-x"></i>
-            </button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+  <div class="row" *ngFor="let Educacion of educacion">
+    <div class="col-xm-12 col-md-2" *ngIf="Educacion">
+      <img
+        id="imagen"
+        src="{{ Educacion.imgInstitucionEd }}"
+        alt="Logo de institucion"
+        max-width="100px"
+      />
+    </div>
+    <div class="col-xm-11 col-md-9">
+      <p class="titulo">
+        {{ Educacion.tituloEd }} ({{ Educacion.fechaInicioEd }} -
+        {{ Educacion.fechaFinEd }})
+      </p>
+      <p class="contenido">{{ Educacion.institucionEd }}</p>
+    </div>
+    <div class="col-1 col-md-1" *ngIf="isLogged">
+      <button class="btn btn-light" routerLink="/editedu/{{ Educacion.id }}">
+        <i class="bi bi-pencil-fill"></i>
+      </button>
+      <button class="btn btn-danger" (click)="delete(Educacion.id)">
+        <i class="bi bi-trash-fill"></i>
+      </button>
+    </div>
   </div>
-  <!-- <div>
-        <ul>
-            <li class="row">
-                <img src="../../../assets/logoAPE.jpg" alt="Foto de estudio 1" class="col-2">
-                <div class="col-10">
-                <h2>Educación secundaria</h2> - <h3>(2008 - 2012)</h3>
-                <p>Escuela Adolfo Pérez Esquivel 4-128</p>
-                <p>Economía y gestión en las organizaciones</p>
-                </div>
-            </li>
-            <li class="row">
-                <img src="../../../assets/logoFCE.jpg" alt="Foto de estudio 2" class="col-2">
-                <div class="col-10">
-                <h2>Educación superior</h2> - <h3>(2014 - Actualidad)</h3>
-                <p>Facultad de Ciencias Económicas - Universidad Nacional de Cuyo</p>
-                <p>Contador Público Nacional y Perito Partidor</p>
-                </div>
-            </li>
-            <li class="row">
-                <img src="../../../assets/Ministerio_de_Desarrollo_Productivo_arg (1).jpg" alt="Foto de estudio 3" class="col-2">
-                <div class="col-10">
-                <h2>Certificaciones</h2> - <h3>(2021)</h3>
-                <p>Ministerio de desarrollo productivo Argentina </p>
-                <p>Curso Sé Programar</p>
-                </div>
-        </ul>
-    </div> -->
 </div>

@@ -1,0 +1,36 @@
+.row {
+    padding: 20px;
+    background-color: rgb(231, 212, 181)
+}
+
+h1 {
+    background-color: rgba(242, 215, 217, 0.699);
+}
+
+img {
+    box-shadow: 10px 10px 20px black;
+    height: 250px;
+}
+
+.titulo,
+.contenido {
+    font-size: 0.5cm;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.titulo {
+    font-size: 30px;
+    font-weight: bold;
+
+}
+
+.imagen {
+    text-align: center;
+}
+
+a {
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+}

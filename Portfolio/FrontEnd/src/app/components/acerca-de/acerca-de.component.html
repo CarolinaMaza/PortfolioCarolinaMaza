@@ -1,12 +1,21 @@
-<div class="row"> <!--tuve que sacar container-fluid para eliminar la franja blanca-->
-    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-        <img id="fotoPerfil" src="../../../assets/IMG_20201025_211359235_HDR (1) - copia.jpg" alt="Foto de Carolina Maza">
-        <p id="nombre"> Carolina Fernanda Maza Sasiuk </p>
-        <p id="titulo"> Full Stack Developer Trainee </p>
-    </div>        
-    <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 texto">
-        <h1>Acerca de mi</h1>
-        <img id="vineta" src="../../../assets/star.png">
-        <p>Estudiante de 5° año de la carrera Contador Público Nacional y Perito Partidor incursionando en la programación</p>
-    </div>
+<div class="row" *ngIf="persona">
+  <!-- //Tuve que sacar conteiner fluid para eliminar la franja blanca -->
+  <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+    <img id="fotoPerfil" src="{{ persona.img }}" alt="Foto de Carolina Maza" />
+    <p id="nombre">{{ persona.nombre }} {{ persona.apellido }}</p>
+    <p id="titulo">{{ persona.titulo }}</p>
+  </div>
+  <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 col-xl-9 div">
+    <h1>Acerca de mí</h1>
+    <img id="vineta" src="../../../assets/star.png" />
+    <button
+      type="button"
+      class="btn btn-dark"
+      routerLink="/editacercade/1"
+      *ngIf="isLogged"
+    >
+      Edit
+    </button>
+    <p>{{ persona.descripcion }}</p>
+  </div>
 </div>

@@ -1,19 +1,20 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { Educacion } from '../model/educacion';
 
 @Injectable({
   providedIn: 'root',
 })
 export class EducacionService {
-  URL = 'http://localhost:8080/educacion/';
+  URL = environment.URL + 'educacion/';
 
   constructor(private httpClient: HttpClient) {}
 
   //Mét. propios de la clase para traer lista, traer, guardar, actualizar y borrar educación.
   public lista(): Observable<Educacion[]> {
-    return this.httpClient.get<Educacion[]>(this.URL + 'lista');
+    return this.httpClient.get<Educacion[]>(this.URL + 'list');
   }
 
   public detail(id: number): Observable<Educacion> {

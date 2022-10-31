@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/persona")
-@CrossOrigin(origins = {"https://frontpruebamsasiuk.web.app", "http://localhost:4200"})
+@CrossOrigin(origins = {"https://frontcaromaza.web.app", "http://localhost:4200"})
 public class PersonaController {
 
     //Clase que permite crear, buscar, editar, borrar los datos persona del portfolio
