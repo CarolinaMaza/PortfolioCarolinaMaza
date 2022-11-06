@@ -4,33 +4,30 @@
     <button
       type="button"
       class="btn btn-dark"
-      routerLink="/newproyecto"
+      routerLink="/newp"
       *ngIf="isLogged"
     >
       Add new
     </button>
   </div>
 
-  <div class="row" *ngFor="let Proyecto of proyecto">
+  <div class="row" *ngFor="let proyecto of proyectoList">
     <div class="col-xm-12 col-md-6">
-      <p class="titulo">{{ Proyecto.nombreP }}</p>
-      <p class="contenido">{{ Proyecto.descripcionP }}</p>
-      <p class="contenido">{{ Proyecto.fechaP }}</p>
-      <a href="{{ Proyecto.linkP }}" target="_blank" rel="noreferrer noopener"
-        >{{ Proyecto.linkP }}
+      <p class="titulo">{{ proyecto.nombreP }}</p>
+      <p class="contenido">{{ proyecto.descripcionP }}</p>
+      <p class="contenido">{{ proyecto.fechaP }}</p>
+      <a href="{{ proyecto.linkP }}" target="_blank" rel="noreferrer noopener"
+        >{{ proyecto.linkP }}
       </a>
     </div>
-    <div class="col-xm-11 col-md-5 imagen" *ngIf="Proyecto">
-      <img id="imagen" src="{{ Proyecto.imgP }}" alt="Foto del proyecto" />
+    <div class="col-xm-11 col-md-5 imagen" *ngIf="proyecto">
+      <img id="imagen" src="{{ proyecto.imgP }}" alt="Foto del proyecto" />
     </div>
     <div class="col-1 col-md-1" *ngIf="isLogged">
-      <button
-        class="btn btn-light"
-        routerLink="/editproyecto/{{ Proyecto.id }}"
-      >
+      <button class="btn btn-light" routerLink="/editp/{{ proyecto.id }}">
         <i class="bi bi-pencil-fill"></i>
       </button>
-      <button class="btn btn-danger" (click)="delete(Proyecto.id)">
+      <button class="btn btn-danger" (click)="delete(proyecto.id)">
         <i class="bi bi-trash-fill"></i>
       </button>
     </div>

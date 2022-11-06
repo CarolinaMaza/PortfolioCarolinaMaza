@@ -4,34 +4,34 @@
     <button
       type="button"
       class="btn btn-dark"
-      routerLink="/nuevaedu"
+      routerLink="/newed"
       *ngIf="isLogged"
     >
       Add new
     </button>
   </div>
 
-  <div class="row" *ngFor="let Educacion of educacion">
-    <div class="col-xm-12 col-md-2" *ngIf="Educacion">
+  <div class="row" *ngFor="let educacion of educacionList">
+    <div class="col-xm-12 col-md-2" *ngIf="educacion">
       <img
         id="imagen"
-        src="{{ Educacion.imgInstitucionEd }}"
+        src="{{ educacion.imgInstitucionEd }}"
         alt="Logo de institucion"
         max-width="100px"
       />
     </div>
     <div class="col-xm-11 col-md-9">
       <p class="titulo">
-        {{ Educacion.tituloEd }} ({{ Educacion.fechaInicioEd }} -
-        {{ Educacion.fechaFinEd }})
+        {{ educacion.tituloEd }} ({{ educacion.fechaInicioEd }} -
+        {{ educacion.fechaFinEd }})
       </p>
-      <p class="contenido">{{ Educacion.institucionEd }}</p>
+      <p class="contenido">{{ educacion.institucionEd }}</p>
     </div>
     <div class="col-1 col-md-1" *ngIf="isLogged">
-      <button class="btn btn-light" routerLink="/editedu/{{ Educacion.id }}">
+      <button class="btn btn-light" routerLink="/edited/{{ educacion.id }}">
         <i class="bi bi-pencil-fill"></i>
       </button>
-      <button class="btn btn-danger" (click)="delete(Educacion.id)">
+      <button class="btn btn-danger" (click)="delete(educacion.id)">
         <i class="bi bi-trash-fill"></i>
       </button>
     </div>

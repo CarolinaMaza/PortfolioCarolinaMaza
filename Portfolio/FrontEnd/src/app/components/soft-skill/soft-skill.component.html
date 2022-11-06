@@ -14,11 +14,11 @@
 <div class="row">
   <div
     class="circulo col-sm-6 col-md-4 col-lg-3"
-    *ngFor="let SoftSkill of softSkill"
+    *ngFor="let softSkill of softSkillList"
   >
     <circle-progress
-      [title]="SoftSkill.nombreSf"
-      [percent]="SoftSkill.porcentajeSf"
+      [title]="softSkill.nombreSf"
+      [percent]="softSkill.porcentajeSf"
       [maxPercent]="100"
       [radius]="100"
       [showTitle]="true"
@@ -41,11 +41,11 @@
     <div class="circulo" *ngIf="isLogged">
       <button
         class="btn btn-light"
-        routerLink="/editsfskill/{{ SoftSkill.id }}"
+        routerLink="/editsfskill/{{ softSkill.id }}"
       >
         <i class="bi bi-pencil-fill"></i>
       </button>
-      <button class="btn btn-danger" (click)="delete(SoftSkill.id)">
+      <button class="btn btn-danger" (click)="delete(softSkill.id)">
         <i class="bi bi-trash-fill"></i>
       </button>
     </div>

@@ -1,5 +1,5 @@
 <body>
-  <div class="container" *ngIf="expLab">
+  <div class="container" *ngIf="experiencia">
     <form (ngSubmit)="onUpdate()" novalidate #f="ngForm" class="row">
       <div class="form-group col-xs-12 col-md-6">
         <label for="nombreEx">Nombre de la empresa</label>
@@ -8,7 +8,7 @@
           class="form-control"
           id="nombreEx"
           name="nombreEx"
-          [(ngModel)]="expLab.empresaEx"
+          [(ngModel)]="experiencia.empresaEx"
           required
         />
       </div>
@@ -19,7 +19,7 @@
           class="form-control"
           id="tituloEx"
           name="tituloEx"
-          [(ngModel)]="expLab.tituloEx"
+          [(ngModel)]="experiencia.tituloEx"
           required
         />
       </div>
@@ -30,7 +30,7 @@
           class="form-control"
           id="descripcionE"
           name="descripcionE"
-          [(ngModel)]="expLab.descripcionEx"
+          [(ngModel)]="experiencia.descripcionEx"
           required
         />
       </div>
@@ -41,7 +41,7 @@
           class="form-control"
           id="fechaInicioEx"
           name="fechaInicioEx"
-          [(ngModel)]="expLab.fechaInicioEx"
+          [(ngModel)]="experiencia.fechaInicioEx"
           required
         />
       </div>
@@ -52,17 +52,17 @@
           class="form-control"
           id="fechaFinP"
           name="fechaFinP"
-          [(ngModel)]="expLab.fechaFinEx"
+          [(ngModel)]="experiencia.fechaFinEx"
           required
         />
       </div>
       <div class="form-group">
-        <label for="imgEx">Foto</label>
+        <label for="imgEmpresaEx">Foto</label>
         <input
           type="file"
           class="form-control"
-          id="imgEx"
-          name="imgEx"
+          id="imgEmpresaEx"
+          name="imgEmpresaEx"
           (change)="uploadImage($event)"
           accept=".jpg, .jpeg, .png"
         />
