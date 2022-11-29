@@ -9,5 +9,6 @@ export const environment = {
     messagingSenderId: '894506018002',
   },
   production: true,
-  URL: 'https://bdcaromaza.herokuapp.com/',
+  // URL: 'https://bdcaromaza.herokuapp.com/',
+  URL: 'https://proyectoap-carolinamaza.koyeb.app/',
 };
